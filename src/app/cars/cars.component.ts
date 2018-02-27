@@ -9,6 +9,7 @@ export class CarsComponent {
 
   addCarStatus = '';
   inputText = '';
+  text = 'UPS';
 
   constructor() {
   }

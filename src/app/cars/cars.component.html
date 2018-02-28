@@ -7,7 +7,6 @@
     <p *ngIf="!addCarStatus" >Машине не добавлена</p>
     <p *ngIf="addCarStatus" >Машине добавлена!!!</p> 
 -->
-
     <p *ngIf="!addCarStatus; else successStatus" >Машине не добавлена</p>
     <ng-template #successStatus >
         <p>Машине добавлена!!!</p>
@@ -16,5 +15,18 @@
 
 
 <hr> 
-<app-car></app-car>
-<app-car></app-car>
+
+<!-- <app-car *ngFor="let car of cars" ></app-car> -->
+
+<ul>
+    <li *ngFor="let car of cars; let idx = index" >
+        <span 
+            [ngStyle]="{'backgroundColor': (idx + 1) % 2 === 0 ? 'red':'green',
+                        'color': 'white'}" 
+            [ngClass]="{'big-text': setBigCarText(car)}"
+            
+        >
+            <b> {{ idx + 1 }} </b> - {{ car }}
+        </span>
+    </li>
+</ul>

@@ -11,6 +11,8 @@ export class CarComponent {
 
   // carName = 'Ford';
   // carYear = 2017;
+  // carYear = 2017;
+  // carYear = 2017;
 
   @Input('carItem') car: {name: string, year: number};
 
